@@ -1,0 +1,8 @@
+.f-over{
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+.hide{/*Esconder Elemento*/
+    visibility: hidden;
+}

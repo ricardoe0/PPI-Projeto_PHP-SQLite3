@@ -1,0 +1,31 @@
+@font-face {/*EternalUiBold*/
+    font-family: EternalUiRegular;
+    src: url("../source/fonts/EternalUiRegular.ttf");
+    /*
+        Fonte regular sem muito destaque para 
+        as partes finais da página
+    */
+}
+@font-face {/*EternalBold*/
+    font-family: EternalBold;
+    src: url("../source/fonts/EternalBold.ttf");
+    /*
+        Fonte com muito destaque para titúlos
+    */
+}
+@font-face {/*DoomRegular*/
+    font-family: DoomRegular;
+    src: url("../source/fonts/DoomRegular.ttf");
+    /*
+        Fonte mediana com certo destaque para as partes 
+        do corpo da página
+    */
+}
+@font-face {/*Amazdoom*/
+    font-family: Amazdoom;
+    src: url("../source/fonts/Amazdoomright.ttf");
+    /*
+        Fonte mediana com certo destaque para 
+        subtítulos da página
+    */
+}
