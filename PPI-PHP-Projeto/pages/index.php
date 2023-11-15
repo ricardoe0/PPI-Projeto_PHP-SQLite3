@@ -74,25 +74,16 @@
                 </thead>
                 <?php 
                 //Connection
-                $conn = new PDO("sqlite:../database/jogadores.sqlite");
+                $conn = new PDO("sqlite:../database/Tiro_ao_Alvo.sqlite");
                 $conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_OBJ);
-                require_once ("../models/jogador.php");
+                require_once ("../models/.php");
                 $jogadores = new Jogador();
                 $data_jogadores = array();
                 $cont = 1;
-                $query = $conn->query("SELECT * FROM jogadores ORDER BY acertos DESC,
-                erros ASC, hora ASC, minuto ASC, dia ASC, mes ASC, ano ASC;");
+                $query = $conn->query(";");
                 $data_jogadores = $query->fetchAll();
                 foreach($data_jogadores as $j):
-                    $jogadores->setNome($j->nome);
-                    $jogadores->setAcertos($j->acertos);
-                    $jogadores->setErros($j->erros);
-                    $jogadores->setHora($j->hora);
-                    $jogadores->setMinuto($j->minuto);
-                    $jogadores->setDia($j->dia);
-                    $jogadores->setHora($j->hora);
-                    $jogadores->setAno($j->ano);
-                    $jogadores->setMes($j->mes);
+                    
                 ?>
                 <tbody class="tab-body sub-letter">
                     <tr>
