@@ -86,10 +86,9 @@
                                         FROM Jogador
                                         INNER JOIN Partida
                                         ON Jogador.id_jogador=Partida.id_jogador
-                                        ORDER BY acertos DESC, erros ASC;
+                                        ORDER BY acertos DESC, erros ASC,datas ASC,horario ASC;
                                     ");
                 $data_jogadores = $query->fetchAll();
-
                 foreach($data_jogadores as $j):
                     $jogadores->setNome($j->nome);
                     $partida->setAcertos($j->acertos);
