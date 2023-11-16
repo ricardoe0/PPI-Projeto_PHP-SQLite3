@@ -5,10 +5,6 @@ class Partida{
         private $data;       
         private $horario;
         
-        public function __construct( $acertos,  $erros){
-                $this->acertos = $acertos;
-                $this->erros = $erros;
-        }
         public function getAcertos() {return $this->acertos;}
 
 	public function getErros() {return $this->erros;}
@@ -21,13 +17,11 @@ class Partida{
 
 	public function setErros( $erros) {$this->erros = $erros;}
 
-	public function setData( $data, $dia, $mes, $ano) {
-                $data = $dia . "/" . $mes . "/" . $ano;
+	public function setData($data) {
                 $this->data = $data;
         }
 
-	public function setHorario( $horario,$hora,$minuto ) {
-                $horario = $hora . ":" . $minuto;
+	public function setHorario($horario) {
                 $this->horario = $horario;
         }
 }	

@@ -76,23 +76,35 @@
                 //Connection
                 $conn = new PDO("sqlite:../database/Tiro_ao_Alvo.sqlite");
                 $conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_OBJ);
-                require_once ("../models/.php");
+                require_once ("../models/jogador.php");
+                require_once ("../models/partida.php");
                 $jogadores = new Jogador();
+                $partida = new Partida();
                 $data_jogadores = array();
                 $cont = 1;
-                $query = $conn->query(";");
+                $query = $conn->query(" SELECT Jogador.nome,Partida.acertos,Partida.erros,Partida.datas,Partida.horario 
+                                        FROM Jogador
+                                        INNER JOIN Partida
+                                        ON Jogador.id_jogador=Partida.id_jogador
+                                        ORDER BY acertos DESC, erros ASC;
+                                    ");
                 $data_jogadores = $query->fetchAll();
+
                 foreach($data_jogadores as $j):
-                    
+                    $jogadores->setNome($j->nome);
+                    $partida->setAcertos($j->acertos);
+                    $partida->setErros($j->erros);
+                    $partida->setHorario($j->horario);
+                    $partida->setData($j->datas);
                 ?>
                 <tbody class="tab-body sub-letter">
                     <tr>
                         <td><?= $cont; ?></td>
                         <td><?= $jogadores->getNome(); ?></td>
-                        <td><?= $jogadores->getAcertos(); ?></td>
-                        <td><?= $jogadores->getErros(); ?></td>
-                        <td><?= $jogadores->getData(); ?></td>
-                        <td><?= $jogadores->getHorario(); ?></td>
+                        <td><?= $partida->getAcertos(); ?></td>
+                        <td><?= $partida->getErros(); ?></td>
+                        <td><?= $partida->getData(); ?></td>
+                        <td><?= $partida->getHorario(); ?></td>
                     </tr>
                 <?php 
                 $cont++; 
