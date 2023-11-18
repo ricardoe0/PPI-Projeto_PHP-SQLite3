@@ -1,0 +1,97 @@
+html{
+    height: 100%;
+    min-height: 100%;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+/* Placar do Jogo */
+section{
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0 0 1% 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+section > div{
+    width: 20%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+section > div > span{
+    display: block;
+    margin-top: 5%;
+}
+/* Rodapé */
+footer{
+    width: 100%;
+    height: auto;
+    margin-top: auto;
+    left: 0;
+    bottom: 0;
+    display: inline-block;
+    background-color: aqua;
+}
+#wrap-content-footer{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#wrap-content-footer > div{
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+/* Área do jogo */
+table{
+    width: 80%;
+    height: auto;
+}
+#wrap-area-jogo{
+    margin-top: 10%;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#area-jogo{
+    width: 80%;
+    height: 30rem;
+    background-color: aqua;
+}
+#timer{
+    width: 80%;
+    height: auto;
+}
+/* Ranking */
+#rank-area{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin: 5% auto 5% auto;
+    text-align: center;
+}
+#rank-area > h3,th,td{
+    padding: 1% 5% 1% 5%;
+}
+#wrap-content-rank{
+    width: 80%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
