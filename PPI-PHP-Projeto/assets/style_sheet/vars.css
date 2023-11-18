@@ -1,0 +1,11 @@
+:root{
+    --color-black: rgb(0,0,0);
+    --color-grey: rgba(13, 13, 13, 0.85);
+    --color-silver: rgba(14, 4, 4, 0.839);
+    --color-hardpurple: rgb(16, 4, 4);
+    --color-white:rgb(238, 250, 251);
+    --color-yellow:rgb(244, 248, 143);
+    --color-red:rgb(176, 29, 29);
+    --color-shyred:rgb(200, 7, 7);
+    --color-blue:rgb(29, 51, 164);
+}

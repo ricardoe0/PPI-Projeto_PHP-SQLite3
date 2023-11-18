@@ -1,0 +1,250 @@
+@import url("font.css");
+@import url("vars.css");
+body{
+    background-color: var(--color-black);
+}
+/* Modulos Dos Elementos */
+/* >>Rodapé */
+.f-content{
+    background-color: var(--color-hardpurple);
+}
+/* Rodapé */
+.top-letter.f-over{
+    background-color: var(--color-grey);
+}
+/* >>Tabela */
+.tab-head{
+    color: var(--color-red);
+    letter-spacing: 3px;
+    margin: 10%;
+    font-size: 3rem;
+}
+.tab-body.sub-letter{
+    font-size: 1.5rem;
+}
+tbody.tab-body > tr{
+    background-image: linear-gradient(var(--color-black),
+    var(--color-blue));
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    transition: background-size .5s, color .5s;
+    color: var(--color-blue);
+}
+tbody.tab-body > tr:hover{
+    background-size: 100% 100%;
+    color: var(--color-white);
+}
+.tab{
+    border: inset var(--color-yellow) 2px;
+    margin-bottom: 2%;
+    padding: 1%;
+}
+/* >>Classificação */
+.content-rank{
+    background-color: var(--color-hardpurple);
+}
+div.content-rank > h3{
+    color: var(--color-yellow);
+    font-size: 5rem;
+    letter-spacing: 3px;
+}
+/* >>Área do jogo */
+#area-jogo{
+    cursor: url(../source/images/ponteiro.png),auto;
+}
+.cenario{
+    background-image: url(../source/images/cenario.png);
+    background-size: cover;
+    border: solid yellow 1px;
+}
+.alvo{
+    max-width: 30%;
+    max-height: 20%;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 45%;
+    bottom: 35%;
+    visibility: hidden;
+}
+/* >>Temporizador */
+.timer{
+    border: solid yellow 1px;
+    color: var(--color-red);
+    background-color: aliceblue;
+    text-align: center;
+    font-size: 3rem;
+    padding-top: 2%;
+    letter-spacing: 2rem;
+    font-weight: 900;
+    background-color: var(--color-hardpurple);
+}
+/* >>Botão */
+.btn{
+    display: inline-block;
+    text-align: center;
+}
+.start{
+    width: 7%;
+    height: auto;
+    padding: 0.5%;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    letter-spacing: 0.3rem;
+    background-image: linear-gradient(var(--color-red),
+    var(--color-shyred));
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    transition: background-size .5s, color .5s;
+    border: solid 3px var(--color-white);
+    border-radius: 10px;
+    margin-top: 1%;
+    margin-right: 3%;
+}
+button.start.btn:hover{
+    background-size: 100% 100%;
+    border-bottom: solid 6px var(--color-white);
+    transform: translateY(-0.10em);
+}
+button.start.btn:active{
+    transform: translateY(0.10em);
+    color: var(--color-hardpurple);
+    transition: color 0.1s;
+}
+/* >>Popoup */
+.popup{
+    background-image: linear-gradient(to right top, #100404, #1b0404, #220504, #290504, #300404);
+    background-repeat: no-repeat;
+    width: 25rem;
+    height: 20rem;
+    position: absolute;
+    left: 35%;
+    bottom: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 0 8px 2px rgba(0,0,0,0.6),
+                0 0 8px 2px rgba(0,0,0,0.6);
+    visibility: hidden;
+}
+.popup > h3{
+    color: var(--color-yellow);
+    margin-top: 4%;
+}
+.popup > form{
+    width: 75%;
+    height: 100%;
+    border: solid var(--color-yellow) 3px;
+    padding: 5%;
+    display: table-cell;
+}
+.popup > form > fieldset > legend{
+    font-size: 2.55rem;
+    color: var(--color-shyred);
+}
+.popup > form > fieldset > label{
+    font-size: 1.75rem;
+}
+.inp{
+    border: none;
+    border-bottom: solid 2px var(--color-yellow);
+    background-color:rgba(255, 255, 255, 0) ;
+    text-align: center;
+    width: 60%;
+    height: 45%;
+    margin: 2%;
+    padding: 2% 2% 0 2%;
+}
+.inp:focus{
+    outline: none;
+}
+.inp.main-letter{
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+    text-transform: none;
+}
+.inp.hide{/* Inputs que enviam dados */
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 0;
+}
+.wrap-inp{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    margin-bottom: 5%;
+    padding-bottom: 0;
+}
+.wrap-inp.main-letter{
+    font-size: 2rem;
+    color: var(--color-shyred);
+}
+.submit{
+    width: 75%;
+    height: auto;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    font-size: 1.09rem;
+    padding: 6px 0 6px 0;
+    border-radius: 10px;
+    border: solid 2px var(--color-white);
+    vertical-align: bottom;
+    background-image: linear-gradient(var(--color-red),
+    var(--color-shyred));
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    transition: background-size .5s, color .5s;
+}
+.submit:hover{
+    background-size: 100% 100%;
+    color: var(--color-white);
+    border-bottom: solid 4.5px var(--color-white);
+    transform: translateY(-0.1em);
+}
+.submit:active{
+    transform: translateY(0.1em);
+    transition: color 0.1s;
+}
+/* Modulos de Texto */
+.top-letter{
+    color: var(--color-white);
+    font-family: EternalBold;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+}
+.main-letter{
+    color: var(--color-white);
+    font-family: DoomRegular;
+    font-size: 1.3rem;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+.sub-letter{
+    color: var(--color-white);
+    font-family: Amazdoom;
+    font-size: 1.2rem;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+.f-letter{
+    color: var(--color-white);
+    font-family: EternalUiRegular;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+::selection{/* Seleção do texto nula */
+    color: none;
+    background-color: rgba(255, 254, 254, 0);
+}
